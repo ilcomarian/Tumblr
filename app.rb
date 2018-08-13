@@ -32,10 +32,17 @@ erb :userid
 
 end
 
+get "/post/:id" do
+
+  @post = Post.find(params[:id])
+  erb :postid
+  # render :layout => "l"
+  end
 get "/post" do
 
   @all_article = Post.all
   erb :all_article
+  
   
 end
 
@@ -71,7 +78,19 @@ delete  "/post/:id" do
   redirect "/post"
   end
   
-# get "/dogs/:id" do
+
+
+ get  "/login" do 
+
+  erb :login
+ end
+ 
+
+ get  "/register" do 
+
+  erb :register
+ end
+ # get "/dogs/:id" do
 #   @specific_dog = Dog.find(params[:id])
 #   erb :show_dog
 # end

@@ -42,3 +42,67 @@
     color: white;
     text-align: center;
 }
+
+#login{
+    background-image: url('images/learn.jpeg');
+    width: 100%;
+    height: 600px;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    .copy{
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color : white;
+        text-shadow: 5px -1px 7px #716d6db3;
+        font-family: 'Fredericka the Great', cursive;
+        overflow: hidden; 
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: 
+        typing 3.5s steps(20, end),
+      
+      }
+}
+ 
+#register{
+    background-image: url('images/singin.jpeg');
+    width: 100%;
+    height: 600px;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    .copy{
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color : white;
+        text-shadow: 5px -1px 7px #716d6db3;
+        font-family: 'Fredericka the Great', cursive;
+        overflow: hidden; 
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: 
+        typing 3.5s steps(20, end),
+      
+      }
+}
+
+#contactForm{
+    margin: 9%;
+}
+
+#card{
+  margin-top:5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  flex-direction: column;
+
+}

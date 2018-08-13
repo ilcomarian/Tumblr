@@ -1,5 +1,16 @@
+
+<div id = "card">
 <% @all_article.each do  |single_post| %>
-    <h1> <%= single_post.title%>  </h1>
-    <p>  <%= single_post.post%></p>
-    
-    <% end %>
+
+ <div class="card text-white bg-dark mb-3" style="width: 80%;">
+  
+  <div class="card-header"><a href="/post/<%=single_post.id%>"><%= single_post.title%></a></div>
+  <div class="card-body">
+    <h5 class="card-title">Dark card title</h5>
+    <p class="card-text"><%= single_post.post%></p>
+  </div>
+</div>
+
+<% end %>
+</div>
+   
