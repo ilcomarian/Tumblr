@@ -3,8 +3,12 @@
 <% @all_article.each do  |single_post| %>
 
  <div class="card text-white bg-dark mb-3" style="width: 80%;">
-  
-  <div class="card-header"><a href="/post/<%=single_post.id%>"><%= single_post.title%></a></div>
+
+
+  <div class="card-header"><a href="/post/<%=single_post.id%>"><%= single_post.title%></a>
+  <a href="/post/<%=single_post.id%>/edit"><h3>Edit</h3></a>
+ <a href="/post/<%=single_post.id%>"><h3>Delete</h3></a>
+  </div>
   <div class="card-body">
     <h5 class="card-title">Dark card title</h5>
     <p class="card-text"><%= single_post.post%></p>
@@ -13,4 +17,4 @@
 
 <% end %>
 </div>
-   
+ 

@@ -81,28 +81,23 @@ get "/logout" do
   redirect "/"
 end
 
-get "/post/new" do
-  if session[:user_id]
-  erb :newform
-  else
-    flash[:warning] = "Sign-in please"
-    erb :login
-  end
-end
 
 post "/post" do
   if session[:user_id]
-  Post.create(title: params[:title], post: params[:post])
+   @user =  session[:user_id]
+  Post.create(title: params[:title], post: params[:post],user_id: @user)
+
   redirect "/post"
+
   else
     flash[:warning] = "Sign-in please"
     erb :login
   end
 
 end
-get "/user/:id" do
+get "/user" do
   if session[:user_id]
-    @user = User.find(params[:id])
+    @user = User.find(session[:user_id])
     @post = @user.posts
 erb :userid
   else
@@ -114,7 +109,7 @@ end
 get "/post/:id" do
   if session[:user_id]
   @post = Post.find(params[:id])
-  @user = Post.find(@post.id).User
+  @user = Post.find(@post.id).user
   erb :postid
   else
     flash[:warning] = "Sign-in please"
@@ -139,6 +134,7 @@ end
 
 get "/post/:id/edit" do
   if session[:user_id]
+  
   @curent_post = Post.find(params[:id])
   erb :edit_post
   else
@@ -170,7 +166,7 @@ delete  "/post/:id" do
   end
   end
   
-
+ 
 
 
  # get "/dogs/:id" do

@@ -8,6 +8,27 @@
 </div>
 <% @post.each do  |single_post| %>
 <h1> <%= single_post.title%>  </h1>
+  /post/:id/edit
+<a href="/post/<%=single_post.id%>"><%= single_post.title%><p>edit</p></a>
+<p>delete</p>
 <p>  <%= single_post.post%></p>
+ 
 
 <% end %>
+
+
+
+
+
+<form method="POST" action ="/post">
+<div class="row">
+<div class="col-md-4 top-marg">
+<input name="title" type="text" placeholder="Enter Your Title">
+</div>
+
+<div class="col-md-12 top-marg-2">
+<textarea name="post" cols="50" rows="9" placeholder="Enter Your Message"></textarea>
+</div>
+
+<input type ="submit" value="Submit">
+</form>
