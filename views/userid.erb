@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"> <%= @user.first_name %> </h5>
+    <p class="card-text"><%= @user.birthday %></p>
+  </div>
+ 
+</div>
+<% @post.each do  |single_post| %>
+<h1> <%= single_post.title%>  </h1>
+<p>  <%= single_post.post%></p>
+
+<% end %>
