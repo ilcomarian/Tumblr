@@ -1,8 +1,10 @@
 
-<div id = "card">
+<div class = "container1">
+<div class = "container">
+
 <% @all_article.reverse.take(20).each do  |single_post| %>
 
- <div class="card text-white bg-dark mb-3" style="width: 80%;">
+ <div class=" bounceIn card text-white bg-dark mb-3 " >
 
 
   <div class="card-header"><a href="/post/<%=single_post.id%>"><%= single_post.title%></a>
@@ -17,4 +19,4 @@
 
 <% end %>
 </div>
- 
+ </div>

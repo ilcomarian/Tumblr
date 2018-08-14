@@ -14,17 +14,17 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
+<link href=<%= url("style.css")%> rel="stylesheet">
 
 </head>
 
  <body>
- <nav class="navbar  bg-white sticky-top">
-<a class="navbar-brand" href="/post">Crypto</a>
-<div id = "btn">
-<a href="/allusers"  class ="butt">allusers</a>
-<a href="/user"  class ="butt"><img src="images/user.ico" style="width: 50%;"></a>
-<a href="/logout" class ="butt" style ="color:black">Log out</a>
+ <nav class="navbar sticky-top" id = "nav">
+<a class="navbar-brand" href="/post"><img src="images/logo.png" style="width: 20%;"></a>
+<div class = "float-right">
+<a href="/logout"  ><img src="images/logout.png"   class ="butt float-right"></a>
+<a href="/user"  ><img src="images/user.ico"  class ="butt float-right" ></a>
+<a href="/allusers"  ><img src="images/Users-icon.png"  class ="butt float-right" ></a>
  
   
 </div>
