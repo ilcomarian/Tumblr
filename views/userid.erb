@@ -6,7 +6,7 @@
   </div>
  
 </div>
-<% @post.each do  |single_post| %>
+<% @post.reverse.take(20).each do  |single_post| %>
 <h1> <%= single_post.title%>  </h1>
   
  
