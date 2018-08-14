@@ -36,23 +36,17 @@ end
 post "/login" do
   @user = User.find_by(email: params[:email])
 
-  # checks to see if the user exists
-  #   and also if the user password matches the password in the db
   if @user && @user.pas == params[:password]
-    # this line signs a user in
-    session[:user_id] = @user.id
-
-    # lets the user know that something is wrong
+ 
+    session[:user_id] = @user.id 
     flash[:info] = "You have been signed in"
 
-    # redirects to the home page
+    
     redirect "/post"
   else
-    # lets the user know that something is wrong
+     
     flash[:warning] = "Your username or password is incorrect"
-
-    # if user does not exist or password does not match then
-    #   redirect the user to the sign in page
+ 
     redirect "/login"
   end
 end
@@ -91,20 +85,44 @@ post "/post" do
 
   else
     flash[:warning] = "Sign-in please"
-    erb :login
+    
+    redirect "/login"
   end
 
 end
+
 get "/user" do
+
   if session[:user_id]
+
     @user = User.find(session[:user_id])
     @post = @user.posts
-erb :userid
+
+    erb :userid
+
   else
     flash[:warning] = "Sign-in please"
-    erb :login
+    redirect "/login"
   end
 end
+
+
+
+delete  "/user/:id" do
+   
+  if session[:user_id]
+    
+    
+    get_current_user.destroy
+    redirect "/post"
+
+    else
+
+    flash[:warning] = "Sign-in please"
+    erb :login
+
+    end
+  end
 
 get "/post/:id" do
   if session[:user_id]
@@ -112,10 +130,12 @@ get "/post/:id" do
   @user = Post.find(@post.id).user
   erb :postid
   else
+
     flash[:warning] = "Sign-in please"
-    erb :login
+    redirect "/login"
+
   end
-  # render :layout => "l"
+  
 end
 
 get "/post" do
@@ -124,7 +144,7 @@ get "/post" do
   erb :all_article
   else
     flash[:warning] = "Sign-in please"
-    erb :login
+    redirect "/login"
   end
   
 end
@@ -133,13 +153,22 @@ end
 
 
 get "/post/:id/edit" do
+ 
   if session[:user_id]
+    @post = Post.find(params[:id])
+    @user = Post.find(@post.id).user
+    if session[:user_id] == @user.id
   
-  @curent_post = Post.find(params[:id])
+    @curent_post = Post.find(params[:id])
   erb :edit_post
+    else
+      flash[:warning] = "access denied"
+      redirect "/post"
+  end
+
   else
     flash[:warning] = "Sign-in please"
-    erb :login
+    redirect "/login"
   end
 end
 
@@ -151,7 +180,7 @@ put  "/post/:id" do
 redirect "/post"
   else
     flash[:warning] = "Sign-in please"
-    erb :login
+    redirect "/login"
   end
 end
 
@@ -162,67 +191,27 @@ delete  "/post/:id" do
   redirect "/post"
   else
     flash[:warning] = "Sign-in please"
-    erb :login
+    redirect "/login"
   end
   end
-  
+  get "/allusers" do
  
+    if session[:user_id]
+     @all_users = User.all
+    erb :all_users
+
+    else
+        flash[:warning] = "access denied"
+        redirect "/post"
+    end
+  end
 
 
- # get "/dogs/:id" do
-#   @specific_dog = Dog.find(params[:id])
-#   erb :show_dog
-# end
-
-
-
-
-
-# post "/dogs" do 
-#   # Dog.create(name: params[:name],breed: params[:breed],age: params[:age])
-#   # redirect "/dogs"
-# end
-
-# get "/dogs/new" do
+  # get "/user_posts" do 
+   
+  #   erb :
+  # end
  
-#   # erb :newdog
-# end
-
-# # edit 
-
-# get "/dogs/:id/edit" do
-#   # @dog = Dog.find(params[:id])
-
-
-#   erb :edit
-# end
-
-# # update 
-
-# put "/dogs/:id" do
-# # @curent_dog = Dog.find(params[:id])
-# # @curent_dog.update(name: params[:name],breed: params[:breed],age: params[:age])
-# # redirect "/dogs"
-# end
-
-# delete "/dogs/:id" do 
-# # @curent_dog = Dog.find(params[:id])
-# # @curent_dog 
-# # redirect "/dogs"
-# end
-
-
-
-
-# get "/owners:id"
-# @owner = params[:id]
-# @specific_owner = Owner.find(params[:id])
-# @owners_dogs = @specific_owner.dogs
-# erb :ownerid
-# end
-
-# get "/random"
-# random_name = ['asdasd','dasd','vodka']
-# random_breed = ["name",'pop']
-# Dog.create(name: random_name, breed: random_breed, age: 20)
-# end
+  def get_current_user 
+    User.find(session[:user_id])
+  end

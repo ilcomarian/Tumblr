@@ -8,9 +8,8 @@
 </div>
 <% @post.each do  |single_post| %>
 <h1> <%= single_post.title%>  </h1>
-  /post/:id/edit
-<a href="/post/<%=single_post.id%>"><%= single_post.title%><p>edit</p></a>
-<p>delete</p>
+  
+ 
 <p>  <%= single_post.post%></p>
  
 
@@ -31,4 +30,13 @@
 </div>
 
 <input type ="submit" value="Submit">
+</form>
+
+
+
+
+<form method="POST" action ="/user/<%= get_current_user.id %>">
+<input type = "hidden" name = "_method" value="DELETE">
+
+<input type ="submit" value="DELETE">
 </form>

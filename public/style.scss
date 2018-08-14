@@ -24,7 +24,7 @@
 }
 
 #btn{
-    width: 10%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -33,15 +33,7 @@
     from { width: 0 }
     to { width: 100% }
   }
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
-}
+  
 
 #login{
     background-image: url('images/learn.jpeg');
@@ -106,3 +98,4 @@
   flex-direction: column;
 
 }
+ 

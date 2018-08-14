@@ -30,7 +30,7 @@
 }
 
 #btn {
-  width: 10%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,16 +55,6 @@
   to {
     width: 100%;
   }
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
 }
 
 #login {
