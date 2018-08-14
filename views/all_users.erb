@@ -3,24 +3,23 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
+      <th scope="col">Name</th>
+      <th scope="col">Last 20 posts</th>
       <th scope="col">Email</th>
-      <th scope="col">Posts_link</th>
+      
     </tr>
   </thead>
   <tbody>
   
   <%  @all_users.each do  |single_user| %>
   <tr>
-   <th scope="row"><%=single_user.id%></th>
-    <td><%=single_user.first_name%></td>
-      <td><%=single_user.last_name%></td>
+   <th scope="row"><%=@count += 1%></th>
+    <td><%=single_user.first_name%> <%=single_user.last_name%></td>
+      <td><a href="/user/<%=single_user.id%>">All posts</a></td>
       <td><%= single_user.email %></td>
-      
-      
  </tr>
 <% end %>
 
 </tbody>
 </table>
+ 

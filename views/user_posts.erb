@@ -1,0 +1,11 @@
+<%= @curent_user.first_name %>
+
+
+<% @curent_post.reverse.take(20).each do  |single_post| %>
+<h1> <%= single_post.title%>  </h1>
+  
+ 
+<p>  <%= single_post.post%></p>
+ 
+
+<% end %>

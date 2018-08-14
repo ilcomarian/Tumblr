@@ -17,11 +17,9 @@ set :database, {adapter: "postgresql",database: "crypto"}
  
 
 get "/" do
-  if session[:user_id]
-    erb :all_article
-  else
+  
     erb :homepage, :layout => :outlayout
-  end
+
 end
 
 
@@ -110,11 +108,11 @@ end
 
 delete  "/user/:id" do
    
-  if session[:user_id]
-    
-    
-    get_current_user.destroy
-    redirect "/post"
+  if session[:user_id]  
+     
+      get_current_user.destroy
+      session[:user_id] = nil
+    redirect "/"
 
     else
 
@@ -140,7 +138,7 @@ end
 
 get "/post" do
   if session[:user_id]
-  @all_article = Post.all
+    @all_article = Post.all
   erb :all_article
   else
     flash[:warning] = "Sign-in please"
@@ -194,9 +192,11 @@ delete  "/post/:id" do
     redirect "/login"
   end
   end
+
   get "/allusers" do
  
     if session[:user_id]
+      @count = 0;
      @all_users = User.all
     erb :all_users
 
@@ -207,11 +207,20 @@ delete  "/post/:id" do
   end
 
 
-  # get "/user_posts" do 
+  get "/user/:id" do 
+    if session[:user_id]
    
-  #   erb :
-  # end
+    @curent_user = User.find(params[:id])
+    @curent_post = @curent_user.posts
+    erb :user_posts
+      else
+        flash[:warning] = "Sign-in please"
+        redirect "/login"
+      end
+    end
+ 
  
   def get_current_user 
     User.find(session[:user_id])
   end
+
