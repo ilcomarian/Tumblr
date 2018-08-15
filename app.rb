@@ -9,7 +9,6 @@ require './models/post'
 
 enable :sessions
 
-set :database, {adapter: "postgresql",database: "crypto"} 
 
 
 
