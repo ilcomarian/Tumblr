@@ -1,5 +1,5 @@
-
-<table class="table table-dark">
+<div class = 'd-flex justify-content-center'>
+<table class="table table-dark ">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -13,13 +13,16 @@
   
   <%  @all_users.each do  |single_user| %>
   <tr>
+  <a href="/user/<%=single_user.id%>">
+   
    <th scope="row"><%=@count += 1%></th>
     <td><%=single_user.first_name%> <%=single_user.last_name%></td>
-      <td><a href="/user/<%=single_user.id%>">All posts</a></td>
+      <td><a href="/user/<%=single_user.id%>">All posts </a></td>
       <td><%= single_user.email %></td>
+      </a>
  </tr>
 <% end %>
 
 </tbody>
 </table>
- 
+ </div>

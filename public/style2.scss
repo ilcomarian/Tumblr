@@ -1,3 +1,5 @@
+
+
 #about{
     background-image: url('images/blockchain.gif');
     width: 100%;
@@ -108,23 +110,60 @@ nav{
 }
 
 // all article
-
-// #nav{
+ 
     
+.container1{
+    width: 100%;
+    background-image: url('images/postsbg.jpg');
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    height:100%;
+  
 
-//  #btn1{
+}
+
+.card{
+    
+    box-shadow: 11px 11px 13px 2px black;
+ }
+  .table{
+    box-shadow: 11px 11px 13px 2px black;
+ }
  
      .butt{
         width: 7%;
         margin-right: 12px;
      }
-//  }
  
-// }
+
+  .table{
+      margin-top: 100px;
+      width: 80%;
+      a{
+        color: white;
+      }
+      
+  }
+
+  .user_post{
+      margin-top: 50px;
+      width: 100%;
+      height: 100%;
+    margin: 10%;
+    display: flex;
+   justify-content: space-between;
+   .user_p{
+       margin-left: 130px;
+   }
+      
+}
+
 .bounceIn {
     
     animation: bounceIn 8s;
   }
+
 
 
 @-webkit-keyframes flash {

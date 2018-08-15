@@ -1,42 +1,76 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"> <%= @user.first_name %> </h5>
-    <p class="card-text"><%= @user.birthday %></p>
+<div class="user_post">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="images/user.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= @user.first_name %>  <%= @user.last_name%>
+      </h5>
+      <p class="card-text">
+       age  <%= @user.birthday %>
+      </p>
+       <form method="POST" action="/user/<%= get_current_user.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+
+    <input type="submit" value="delete account">
+  </form>
+      <form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Example file input</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
   </div>
- 
-</div>
-<% @post.reverse.take(20).each do  |single_post| %>
-<h1> <%= single_post.title%>  </h1>
-  
- 
-<p>  <%= single_post.post%></p>
- 
-
-<% end %>
-
-
-
-
-
-<form method="POST" action ="/post">
-<div class="row">
-<div class="col-md-4 top-marg">
-<input name="title" type="text" placeholder="Enter Your Title">
-</div>
-
-<div class="col-md-12 top-marg-2">
-<textarea name="post" cols="50" rows="9" placeholder="Enter Your Message"></textarea>
-</div>
-
-<input type ="submit" value="Submit">
 </form>
+    </div>
+
+  </div>
+
+  <div class="container">
+  <form method="POST" action="/post">
+    <div class="row user_p">
+      <div class="col-md-4 top-marg">
+        <input name="title" type="text" id="materialContactFormMessage" class="form-control" placeholder="Title">
+        <label for="materialContactFormMessage">    </label>
+      </div>
+
+      <div class="col-md-12 top-marg-2">
+        <textarea name="post" cols="90" rows="19" placeholder="Enter Your Message"></textarea>
+      </div>
+      <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" style = "width:80%"type="submit">Send</button>
+      <%# <input type="submit" value="Submit" > %>
+    
+  </form>
+  </div>
+  </div>
+</div>
+
+  <div class="container">
+
+    <% @post.reverse.take(20).each do  |single_post| %>
+
+      <div class=" bounceIn card text-white bg-dark mb-3 ">
+
+
+        <div class="card-header">
+          <a href="/post/<%=single_post.id%>">
+            <%= single_post.title%>
+          </a>
+          <a href="/post/<%=single_post.id%>/edit" class="float-right">
+            <h6>Edit</h6>
+          </a>
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">
+            <%= single_post.post%>
+          </p>
+        </div>
+      </div>
+
+      <% end %>
+  </div>
 
 
 
 
-<form method="POST" action ="/user/<%= get_current_user.id %>">
-<input type = "hidden" name = "_method" value="DELETE">
 
-<input type ="submit" value="DELETE">
-</form>
+ 

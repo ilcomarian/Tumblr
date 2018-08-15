@@ -138,9 +138,54 @@ nav #btn .butt:hover {
   margin: 9%;
 }
 
+.container1 {
+  width: 100%;
+  background-image: url("images/postsbg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.card {
+  -webkit-box-shadow: 11px 11px 13px 2px black;
+          box-shadow: 11px 11px 13px 2px black;
+}
+
+.table {
+  -webkit-box-shadow: 11px 11px 13px 2px black;
+          box-shadow: 11px 11px 13px 2px black;
+}
+
 .butt {
   width: 7%;
   margin-right: 12px;
+}
+
+.table {
+  margin-top: 100px;
+  width: 80%;
+}
+
+.table a {
+  color: white;
+}
+
+.user_post {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  margin: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user_post .user_p {
+  margin-left: 130px;
 }
 
 .bounceIn {
@@ -267,4 +312,4 @@ nav #btn .butt:hover {
     transform: scale3d(1, 1, 1);
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style2.css.map */
