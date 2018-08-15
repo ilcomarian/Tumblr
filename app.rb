@@ -105,21 +105,7 @@ end
 
 
 
-delete  "/user/:id" do
-   
-  if session[:user_id]  
-     
-      get_current_user.destroy
-      session[:user_id] = nil
-    redirect "/"
 
-    else
-
-    flash[:warning] = "Sign-in please"
-    erb :login
-
-    end
-  end
 
 get "/post/:id" do
   if session[:user_id]
@@ -145,9 +131,6 @@ get "/post" do
   end
   
 end
-
-
-
 
 get "/post/:id/edit" do
  
@@ -217,9 +200,53 @@ delete  "/post/:id" do
         redirect "/login"
       end
     end
+
+    get "/user/:id/edit" do 
+      if session[:user_id]
+     
+        @curent_user = User.find(params[:id])
+      
+      erb :user_edit
+        else
+          flash[:warning] = "Sign-in please"
+          redirect "/login"
+        end
+      end
  
- 
+
+      put  "/user_edit/:id" do
+  
+        if session[:user_id]
+          @curent_user = User.find(params[:id])
+      @curent_user.update(first_name: params[:first_name], last_name: params[:last_name],email: params[:email],birthday: params[:birthday],pas: params[:password] )
+      redirect "/post"
+        else
+          flash[:warning] = "Sign-in please"
+          redirect "/login"
+        end
+      end
+
+
+
+      delete  "/user/:id" do
+   
+        if session[:user_id]  
+           
+            get_current_user.destroy
+            session[:user_id] = nil
+          redirect "/"
+      
+          else
+      
+          flash[:warning] = "Sign-in please"
+          erb :login
+      
+          end
+        end
+
   def get_current_user 
     User.find(session[:user_id])
   end
+
+  
 

@@ -1,9 +1,31 @@
-<%= @curent_user.first_name %>
-
-<% @curent_post.reverse.take(20).each do  |single_post| %>
-<h1> <%= single_post.title%>  </h1>
-  
-<p>  <%= single_post.post%></p>
  
-<% end %>
 
+
+  <div class="container">
+
+    <div class="mt-3">
+    <% @curent_post.reverse.take(20).each do  |single_post| %>
+
+      <div class="card text-white bg-secondary mb-9 ">
+
+
+        <div class="card-header">
+          <a href="/post/<%=single_post.id%>">
+            <%= single_post.title%>
+          </a>
+          <a href="/post/<%=single_post.id%>/edit" class="float-right">
+            <h6>Edit</h6>
+          </a>
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">
+            <%= single_post.post%>
+          </p>
+        </div>
+      </div>
+
+      <% end %>
+  </div>
+  </div>

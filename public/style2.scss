@@ -1,39 +1,33 @@
-
-
-#about{
+#about {
     background-image: url('images/blockchain.gif');
     width: 100%;
     height: 600px;
-    background-size:cover;
-    background-position:center center;
-    background-attachment:fixed;
-    .copy{
-        width:100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    .copy {
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        color : white;
+        color: white;
         text-shadow: 5px -1px 7px #716d6db3;
         font-family: 'Fredericka the Great', cursive;
-        overflow: hidden; 
+        overflow: hidden;
         white-space: nowrap;
         margin: 0 auto;
-        animation: 
-        typing 3.5s steps(20, end),
-      
-      }
+        animation: typing 3.5s steps(20, end),
+    }
 }
 
- 
-nav{
+nav {
     display: flex;
-   background-color: black;
-  
-#btn{    
+    background-color: black;
+    #btn {
         display: flex;
         justify-content: space-between;
-        a{
+        a {
             margin-left: 15px;
             color: white;
             font-size: 1rem;
@@ -41,206 +35,164 @@ nav{
             text-decoration: none;
             font-family: 'Lobster', cursive;
         }
-        .butt:hover{
-             animation: flash 2s infinite ;
+        .butt:hover {
+            animation: flash 2s infinite;
         }
     }
-    
 }
 
-#login{
+#login {
     background-image: url('images/learn.jpeg');
     width: 100%;
     height: 900px;
-    background-size:cover;
-    background-position:center center;
-    background-attachment:fixed;
-    .copy{
-        width:100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    .copy {
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        color : white;
+        color: white;
         text-shadow: 5px -1px 7px #716d6db3;
         font-family: 'Fredericka the Great', cursive;
-        overflow: hidden; 
+        overflow: hidden;
         white-space: nowrap;
         margin: 0 auto;
         animation: typing 3.5s steps(20, end);
-      
-      }
+    }
 }
- 
-#register{
+
+#register {
     background-image: url('images/singin.jpeg');
     width: 100%;
     height: 800px;
-    background-size:cover;
-    background-position:center center;
-    background-attachment:fixed;
-    .copy{
-        width:100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    .copy {
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        color : white;
+        color: white;
         text-shadow: 5px -1px 7px #716d6db3;
         font-family: 'Fredericka the Great', cursive;
-        overflow: hidden; 
+        overflow: hidden;
         white-space: nowrap;
         margin: 0 auto;
-        animation: 
-        typing 3.5s steps(20, end);
-        .register{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        // margin-top: 40%;
-        // width: 50%;
-        // align-items: center;
+        animation: typing 3.5s steps(20, end);
+        .register {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; // margin-top: 40%;
+            // width: 50%;
+            // align-items: center;
         }
-      
-     }
+    }
 }
 
-#contactForm{
+#contactForm {
     margin: 9%;
 }
 
 // all article
- 
-    
-.container1{
+.container1 {
+    position: absolute;
     width: 100%;
-    background-image: url('images/postsbg.jpg');
-    background-size:cover;
-    background-position:center center;
-    background-attachment:fixed;
-    height:100%;
-  
-
+    background-image: url('/images/postsbg.jpeg');
+    background-size: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    // height: 100%;
 }
 
-.card{
+.card {
+    box-shadow: -1px 2px 11px black;
+    
+}
+
+.table {
     
     box-shadow: 11px 11px 13px 2px black;
- }
-  .table{
-    box-shadow: 11px 11px 13px 2px black;
- }
- 
-     .butt{
-        width: 7%;
-        margin-right: 12px;
-     }
- 
+}
 
-  .table{
-      margin-top: 100px;
-      width: 80%;
-      a{
+.butt {
+    width: 7%;
+    margin-right: 12px;
+}
+
+.table {
+    margin-top: 100px;
+    width: 80%;
+    a {
         color: white;
-      }
-      
-  }
-
-  .user_post{
-      margin-top: 50px;
-      width: 100%;
-      height: 100%;
-    margin: 10%;
-    display: flex;
-   justify-content: space-between;
-   .user_p{
-       margin-left: 130px;
-   }
-      
+    }
 }
 
-.bounceIn {
+#post_bg {
+    position: absolute;
+    background-image: url('/images/profile.jpg');
+    margin: 0px;
+    width: 100%;
+    background-size: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    .user_post {
+        margin-top: 20px;
+        width: 60%;
+        height: 80%;
+        margin: 10%;
+        display: flex;
+        justify-content: space-between;
+        .user_p {
+           
+        }
+    }
+}
+
+ .edit{
+
+ width: 100%;
+ height: 800px;
+ display: flex;
+ justify-content: center;
+ margin-top: 50px;
+ .row1{
+   
+    display: flex;
+    flex-direction: column;
+ }
+
+ }
+.container3{
+    background-image: url('/images/postsbg.jpg');
+    position: absolute;
+    width: 100%;
+    background-size: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 1000px;
     
-    animation: bounceIn 8s;
-  }
+   
+    .row{ 
+        
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+         margin-top: 50px;
+    
+ .card_1{
+     
+     height: 100px;
+    overflow-y: scroll;
 
-
-
-@-webkit-keyframes flash {
-    from,
-    50%,
-    to {
-      opacity: 1;
-    }
-  
-    25%,
-    75% {
-      opacity: 0;
-    }
-  }
-  
-  @keyframes flash {
-    from,
-    50%,
-    to {
-      opacity: 1;
-    }
-  
-    25%,
-    75% {
-      opacity: 0;
-    }
-  }
-
-
-
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
- 
-@keyframes bounceIn {
-    from,
-    20%,
-    40%,
-    60%,
-    80%,
-    to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  
-    0% {
-      opacity: 0;
-      -webkit-transform: scale3d(0.3, 0.3, 0.3);
-      transform: scale3d(0.3, 0.3, 0.3);
-    }
-  
-    20% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1);
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-  
-    40% {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9);
-      transform: scale3d(0.9, 0.9, 0.9);
-    }
-  
-    60% {
-      opacity: 1;
-      -webkit-transform: scale3d(1.03, 1.03, 1.03);
-      transform: scale3d(1.03, 1.03, 1.03);
-    }
-  
-    80% {
-      -webkit-transform: scale3d(0.97, 0.97, 0.97);
-      transform: scale3d(0.97, 0.97, 0.97);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-  }
+ }
+}
+}
+ .user-id{
+    display:  flex;
+    justify-content:  center;
+ }
