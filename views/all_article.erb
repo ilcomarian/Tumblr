@@ -7,7 +7,7 @@
 
 <% @all_article.reverse.take(20).each do  |single_post| %>
  <div class="card" style="width: 18rem;" class = ''>
-  <img class="card-img-top col" src="..." alt="Card image cap">
+  <img class="card-img-top" style='height: 150px;' src="<%=single_post.img%>" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"><%= single_post.title%></h5>
     <p class="card-text card_1"><%= single_post.post%></p>

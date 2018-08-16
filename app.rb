@@ -156,7 +156,7 @@ put  "/post/:id" do
   
   if session[:user_id]
 @curent_post = Post.find(params[:id])
-@curent_post.update(title: params[:title], post: params[:post])
+@curent_post.update(title: params[:title], post: params[:post], img: params[:img])
 redirect "/post"
   else
     flash[:warning] = "Sign-in please"

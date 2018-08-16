@@ -1,12 +1,5 @@
-<div id='post_bg'>
-
-
-
-
-
-</div>
-
-<div class="container">
+ 
+<div class="container mt-5">
   <form method="POST" action="/post" class = "user-id">
     <div class="row1">
       <div class="col-md-4 top-marg">
@@ -52,6 +45,12 @@
     <% end %>
 </div>
 
-<a href="/user/<%=@user.id%>/edit">Edit user</a>
+
 </div>
    </div>
+
+
+   
+    <div class="text-center py-3"><a href="/user/<%=@user.id%>/edit" class = 'mb-1 float-center'>Edit user</a>
+    </div>
+     

@@ -1,25 +1,4 @@
-#about {
-    background-image: url('images/blockchain.gif');
-    width: 100%;
-    height: 600px;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    .copy {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-shadow: 5px -1px 7px #716d6db3;
-        font-family: 'Fredericka the Great', cursive;
-        overflow: hidden;
-        white-space: nowrap;
-        margin: 0 auto;
-        animation: typing 3.5s steps(20, end),
-    }
-}
+
 
 nav {
     display: flex;
@@ -35,68 +14,10 @@ nav {
             text-decoration: none;
             font-family: 'Lobster', cursive;
         }
-        .butt:hover {
-            animation: flash 2s infinite;
-        }
+         
     }
 }
 
-#login {
-    background-image: url('images/learn.jpeg');
-    width: 100%;
-    height: 900px;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    .copy {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-shadow: 5px -1px 7px #716d6db3;
-        font-family: 'Fredericka the Great', cursive;
-        overflow: hidden;
-        white-space: nowrap;
-        margin: 0 auto;
-        animation: typing 3.5s steps(20, end);
-    }
-}
-
-#register {
-    background-image: url('images/singin.jpeg');
-    width: 100%;
-    height: 800px;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    .copy {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-shadow: 5px -1px 7px #716d6db3;
-        font-family: 'Fredericka the Great', cursive;
-        overflow: hidden;
-        white-space: nowrap;
-        margin: 0 auto;
-        animation: typing 3.5s steps(20, end);
-        .register {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; // margin-top: 40%;
-            // width: 50%;
-            // align-items: center;
-        }
-    }
-}
-
-#contactForm {
-    margin: 9%;
-}
 
 // all article
 .container1 {
@@ -111,6 +32,11 @@ nav {
 
 .card {
     box-shadow: -1px 2px 11px black;
+    margin-right: 20px;
+    margin-top:20px;
+    a{
+        color: #401515;
+    }
     
 }
 
@@ -168,18 +94,10 @@ nav {
 
  }
 .container3{
-    background-image: url('/images/postsbg.jpg');
-    position: absolute;
-    width: 100%;
-    background-size: 100%;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 1000px;
-    
    
     .row{ 
         
-        height: 300px;
+        height: 400px;
         display: flex;
         justify-content: space-around;
          margin-top: 50px;

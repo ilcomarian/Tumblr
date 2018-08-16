@@ -1,22 +1,26 @@
+<div class="edit">
+      <form method="POST" action="/post/<%= @curent_post.id %>">
+            <input type="hidden" name="_method" value="PUT">
+            <div class="row1">
+                  <div class="col-md-4 top-marg card">
+                        <input name="title" type="text" placeholder="Enter Your Title" value="<%= @curent_post.title %>">
+                  </div>
+                  <div class="row1">
+                        <div class="col-md-4 top-marg card">
+                              <input name="img" type="text" placeholder="img" value="<%= @curent_post.img %>">
+                        </div>
 
- 
-<div class = "edit">
-<form method="POST" action ="/post/<%= @curent_post.id %>">
-<input type = "hidden" name = "_method" value="PUT">
-<div class="row1">
-<div class="col-md-4 top-marg card">
-<input name="title" type="text"  placeholder="Enter Your Title" value ="<%= @curent_post.title %>">
-</div>
+                        <textarea name="post" cols="80" rows="20" placeholder="Enter Your Message" value="<%= @curent_post.post %>">
+                              <%= @curent_post.post %>
+                        </textarea>
+                        <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" style="width:100%" type="submit">Submit</button>
 
- 
-<textarea name="post" cols="80" rows="20" placeholder="Enter Your Message" value ="<%= @curent_post.post %>"><%= @curent_post.post %></textarea>
- <form method="POST" action ="/post/<%= @curent_post.id %>">
-<input type = "hidden" name = "_method" value="DELETE">
-      <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" style = "width:100%"type="submit">DELETE</button>
+      </form>
 
-</form>
- <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" style = "width:100%"type="submit">Submit</button>
- 
-</form>
-</div>
- 
+      <form method="POST" action="/post/<%= @curent_post.id %>">
+
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" style="width:100%" type="submit">DELETE</button>
+
+      </form>
+      </div>

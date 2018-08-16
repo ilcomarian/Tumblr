@@ -1,7 +1,7 @@
  
  
 
-  <div class="copy">
+  <div class="  d-flex justify-content-center  py-5 mt-5 ">
 
 <form action="/user_edit/<%=@curent_user.id%>" method="post" class = "register" >
 <input type = "hidden" name = "_method" value="PUT">
@@ -13,12 +13,10 @@
   <input type="submit" value="edit">
 </form>
 
-
-  </div> 
-
-
-  <form method="POST" action="/user/<%= get_current_user.id %>">
+  <form method="POST" action="/user/<%= get_current_user.id %>" class="ml-3">
   <input type="hidden" name="_method" value="DELETE">
 
   <input type="submit" value="delete account">
 </form>
+  </div> 
+

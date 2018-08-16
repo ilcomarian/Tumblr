@@ -121,7 +121,7 @@ nav #btn .butt:hover {
           animation: typing 3.5s steps(20, end);
 }
 
-#register .copy .register {
+#register .copy .register-style {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,15 +132,11 @@ nav #btn .butt:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 500px;
 }
 
 #contactForm {
   margin: 9%;
-}
-
-.butt {
-  width: 7%;
-  margin-right: 12px;
 }
 
 .bounceIn {
