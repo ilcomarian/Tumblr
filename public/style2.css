@@ -2,7 +2,6 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: black;
 }
 
 nav #btn {
@@ -12,6 +11,7 @@ nav #btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  opacity: 1;
 }
 
 nav #btn a {
@@ -21,6 +21,7 @@ nav #btn a {
   list-style: none;
   text-decoration: none;
   font-family: 'Lobster', cursive;
+  opacity: 1;
 }
 
 .container1 {
@@ -129,5 +130,18 @@ nav #btn a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .row1 {
+    width: 100%;
+    height: 80%;
+  }
+  .mobile-text {
+    width: 100%;
+  }
+  .mbtext {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=style2.css.map */

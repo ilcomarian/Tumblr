@@ -23,27 +23,32 @@
       }
 }
 
- 
-nav{
-    display: flex;
-   background-color: black;
+nav {
+  display: flex;
   
-#btn{    
-        display: flex;
-        justify-content: space-between;
-        a{
-            margin-left: 15px;
-            color: white;
-            font-size: 1rem;
-            list-style: none;
-            text-decoration: none;
-            font-family: 'Lobster', cursive;
-        }
-        .butt:hover{
-             animation: flash 2s infinite ;
-        }
-    }
-    
+  
+  #btn {
+      display: flex;
+      justify-content: space-between;
+      opacity: 1;
+      a {
+          margin-left: 15px;
+          color: white;
+          font-size: 1rem;
+          list-style: none;
+          text-decoration: none;
+          font-family: 'Lobster', cursive;
+          opacity: 1;
+      }
+       
+  }
+}
+
+ 
+
+.butt {
+  width: 7%;
+  margin-right: 12px;
 }
 
 #login{
