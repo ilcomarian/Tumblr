@@ -5,7 +5,7 @@ require "sinatra/reloader"
 require "sinatra/flash"
 require './models/user'
 require './models/post'
-# require "./models/score"
+ 
 
 enable :sessions
 

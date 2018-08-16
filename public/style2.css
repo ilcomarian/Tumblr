@@ -132,6 +132,11 @@ nav #btn a {
           justify-content: center;
 }
 
+#register {
+  margin-top: 20%;
+  margin-left: 10%;
+}
+
 @media screen and (max-width: 800px) {
   .row1 {
     width: 100%;
@@ -142,6 +147,9 @@ nav #btn a {
   }
   .mbtext {
     font-size: 10px;
+  }
+  #register {
+    margin: 30%;
   }
 }
 /*# sourceMappingURL=style2.css.map */

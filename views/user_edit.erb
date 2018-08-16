@@ -1,7 +1,9 @@
  
- 
+ <div  id = "register">
+  <div class="copy">
 
-  <div class="  d-flex justify-content-center  py-5 mt-5 ">
+
+  <div  class = "register-style" >
 
 <form action="/user_edit/<%=@curent_user.id%>" method="post" class = "register" >
 <input type = "hidden" name = "_method" value="PUT">
@@ -10,13 +12,18 @@
   <input type="text" name="email" id="email" placeholder="email" value ="<%=@curent_user.email%>">
    <input type="text" name="birthday" id="birthday" placeholder="birthday" value ="<%=@curent_user.birthday%>">
   <input type="password" name="password" id="password" placeholder="Password" value ="<%=@curent_user.pas%>">
-  <input type="submit" value="edit">
+  <input type="submit" class="btn btn-warning" value="edit">
+  
 </form>
 
-  <form method="POST" action="/user/<%= get_current_user.id %>" class="ml-3">
+
+  <form method="POST" action="/user/<%= get_current_user.id%>">
   <input type="hidden" name="_method" value="DELETE">
 
-  <input type="submit" value="delete account">
-</form>
-  </div> 
-
+  <input type="submit" class="btn btn-danger" value="delete account">
+  </form>
+  
+   </div> 
+  
+  </div>
+ 
