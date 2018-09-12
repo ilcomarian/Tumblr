@@ -1,6 +1,6 @@
 # Demo Log in: test@gmail.com password: 111111
 
-##Fullstack Blog Application
+## Fullstack Blog Application
 
 Application allowes user creating, deleting and editing technology related notes, creating, as well as editing and deleting accounts.
 
@@ -12,7 +12,7 @@ Application allowes user creating, deleting and editing technology related notes
 
 
 
-#Built with:
+# Built with:
 
 Ruby
 Sinatra
@@ -20,7 +20,7 @@ PostgreSQL
 CSS/SASS
 bootstrap
 
-#Features:
+# Features:
 
 Creating new accounts
 Editing / Deleting accounts
